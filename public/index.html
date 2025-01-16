@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>3D Pong</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="home-screen">
+        <h1>3D PONG</h1>
+        <p>Use arrow keys or touch controls to move the paddle</p>
+        <div class="button-container">
+            <button id="bot-button" class="game-button">Play with Bot</button>
+            <button id="multiplayer-button" class="game-button">Play with Friend</button>
+        </div>
+    </div>
+
+    <div id="multiplayer-menu" style="display: none;">
+        <h2>Multiplayer Mode</h2>
+        <div class="button-container">
+            <button id="create-room" class="game-button">Create Room</button>
+            <button id="join-room" class="game-button">Join Room</button>
+        </div>
+        <div id="room-code-display" style="display: none;">
+            <h3>Room Code:</h3>
+            <div id="room-code" class="code-display"></div>
+            <p>Share this code with your friend</p>
+            <p id="waiting-message">Waiting for opponent...</p>
+        </div>
+        <div id="join-room-form" style="display: none;">
+            <input type="text" id="room-code-input" placeholder="Enter Room Code" maxlength="6">
+            <button id="submit-code" class="game-button">Join</button>
+        </div>
+        <button id="back-button" class="game-button">Back to Menu</button>
+    </div>
+
+    <div id="game-screen" style="display: none;">
+        <div id="score-container">
+            <span id="player-score">You: 0</span>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <span id="ai-score">Opponent: 0</span>
+        </div>
+        <div id="countdown">3</div>
+        <div id="game-over">
+            <div id="winner-text"></div>
+            <button id="restart-button">Play Again</button>
+        </div>
+        <div id="disconnect-message" style="display: none;">
+            Opponent disconnected
+            <button id="return-to-menu" class="game-button">Return to Menu</button>
+        </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
