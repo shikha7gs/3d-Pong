@@ -1,6 +1,6 @@
-#3d Pong
+### 3d Pong
 
-Fatures:
+#### Fatures:
   - Multiplayer
   - With Bot
 
