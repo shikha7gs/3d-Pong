@@ -12,7 +12,7 @@ class WebSocketClient {
     }
 
     connect() {
-        this.ws = new WebSocket('ws://https://threed-pong.onrender.com');
+        this.ws = new WebSocket('ws://threed-pong.onrender.com');
 
         this.ws.onopen = () => {
             this.connected = true;
